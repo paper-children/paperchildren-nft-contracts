@@ -15,7 +15,7 @@ contract PaperChildrenV1 is KIP17Full, KIP17Mintable, KIP17MetadataMintable, KIP
 
 	string TOKEN_NAME = "Paper Children V1";
 	string TOKEN_SYMBOL = "PAPER";
-	uint256 MAX_CLONES_SUPPLY = 10000;
+	uint256 MAX_CLONES_SUPPLY = 1004;
 	string private _baseTokenURI;
 
 	address public minterContract;
@@ -34,7 +34,8 @@ contract PaperChildrenV1 is KIP17Full, KIP17Mintable, KIP17MetadataMintable, KIP
 		_;
 	}
 
-	constructor() public KIP17Full(TOKEN_NAME, TOKEN_SYMBOL) {
+	constructor(string memory _baseuri) public KIP17Full(TOKEN_NAME, TOKEN_SYMBOL) {
+		_baseTokenURI = _baseuri;
 		_tokenIdTracker.increment();
 	}
 
