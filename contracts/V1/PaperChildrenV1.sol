@@ -13,7 +13,7 @@ import "../klaytn-contracts/ownership/Ownable.sol";
 contract PaperChildrenV1 is KIP17Full, KIP17Mintable, KIP17MetadataMintable, KIP17Burnable, Ownable {
 	using Strings for uint256;
 
-	string TOKEN_NAME = "Paper Children";
+	string TOKEN_NAME = "Paper Children V1";
 	string TOKEN_SYMBOL = "PAPER";
 	uint256 MAX_CLONES_SUPPLY = 10000;
 	string private _baseTokenURI;
