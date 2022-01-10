@@ -1483,9 +1483,10 @@ contract PaperChildrenV1 is KIP17Full, KIP17Mintable, KIP17MetadataMintable, KIP
 		_;
 	}
 
-	constructor(string memory _baseuri) public KIP17Full(TOKEN_NAME, TOKEN_SYMBOL) {
+	constructor(address _dev, string memory _baseuri) public KIP17Full(TOKEN_NAME, TOKEN_SYMBOL) {
 		_baseTokenURI = _baseuri;
 		_tokenIdTracker.increment();
+		setDevAddress(_dev);
 	}
 
 	function mint(address to) public onlyMinter returns (bool) {
